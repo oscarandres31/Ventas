@@ -1,0 +1,42 @@
+
+<h1>Lista De Productos</h1>
+<a href="<%= new_product_path %>" class="btn btn-primary btn-icon-split">
+  <span class="icon text-write-50">
+  <i class="fas fa-flag"></i>
+  </span>
+  <span class="text">Crear Producto</span>
+</a>
+<%= stylesheet_link_tag  "application", :media => "all" %>
+<%#<%= link_to 'Exportar a Excel', product_url(@product, format: :xlsx), class: 'btn btn-success' %>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Descripción</th>
+     <%#% <th>Tipo</th><%>
+      <th>Categoria</th>
+      <th>Cantidad</th>
+      <th>Medida</th>
+      <th>Marca</th>
+      <th>Precio Compra</th>
+      <th>Precio Venta</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @products.each do |product| %>
+    <tr>
+      <td><%= product.code %></td>
+      <td><%= product.description %></td>
+     <%#% <td><%= product.guy %><%#</td><%>
+      <td><%= product.category_id %></td>
+      <td><%= product.amount %></td>
+      <td><%= product.extend %></td>
+      <td><%= product.brand %></td>
+      <td><%= product.purchase_price %></td>
+      <td><%= product.sale_price %></td>
+      <td><%= link_to "Detalles", product_path(product), class:'btn btn-primary' %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

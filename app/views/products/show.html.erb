@@ -1,0 +1,57 @@
+<%#<p style="color: green"><%= notice %></p>
+
+<%#<%= render @product %>
+
+<%#<div>
+  <%= link_to "Edit this product", edit_product_path(@product) %> |
+ <%#%> <%#<%= link_to "Back to products", products_path %>
+
+ <%# <%= button_to "Destroy this product", @product, method: :delete %>
+
+
+<div class="row">
+  <div class ="col-lg-12">
+    <h1>Detalles del producto</h1>
+    <%= link_to "Regresar al listado de productos", products_path, class: ' btn btn-primary' %>
+    <%= link_to "Editar este producto", edit_product_path(@product), class: 'btn btn-primary' %>
+    <%= link_to "Eliminar este producto", @product, method: :delete, class: 'btn btn-danger' %>
+    <%#<%= link_to "Crear movimiento", new_movement_product_path(@product), class: 'btn btn-success' %>
+<%= link_to "Exportar a Excel", product_path(@product, format: :xlsx), class: 'btn btn-success' %>
+      <div class="card">
+        <table class="table">
+          <tr>
+            <td><b>Codigo</b></td>
+            <td><%= @product.code %></td>
+          </tr>
+          <tr>
+            <td><b>Descripción </b></td>
+            <td><%= @product.description %></td>
+          </tr>
+          <tr>
+            <td><b>Tipo</b></td>
+            <td><%= @product.guy %></td>
+          </tr>
+          <tr>
+            <td><b>Cantidad Actual</b></td>
+            <td><%= @product.amount %></td>
+          </tr>
+           <tr>
+            <td><b>Medida</b></td>
+            <td><%= @product.extend %></td>
+          </tr>
+           <tr>
+            <td><b>Marca</b></td>
+            <td><%= @product.brand %></td>
+          </tr>
+          <tr>
+            <td><b>Precio compra</b></td>
+            <td><%= @product.purchase_price %></td>
+          </tr>
+          <tr>
+            <td><b>Precio Venta</b></td>
+            <td><%= @product.sale_price %></td>
+          </tr>
+        </table>
+      </div>
+  </div>
+</div>

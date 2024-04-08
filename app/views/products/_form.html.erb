@@ -1,0 +1,60 @@
+<%= form_with(model: product) do |form| %>
+  <% if product.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+        <% product.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :code, "Codigo", style: "display: block" %>
+    <%= form.text_field :code %>
+  </div>
+
+  <div>
+    <%= form.label :description, "Descripción", style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :guy, "Tipo", style: "display: block" %>
+    <%= form.text_field :guy %>
+  </div>
+  <div>
+  <%= form.label :category_id, "Categoria", style: "display: block" %>
+  <%= form.collection_select :category_id, Category.all.order(tipe_category: :asc), :id, :tipe_category %>
+  </div>
+  <div>
+    <%= form.label :amount, "Cantidad", style: "display: block" %>
+    <%= form.number_field :amount %>
+  </div>
+
+  <div>
+    <%= form.label :extend, "Medida", style: "display: block" %>
+    <%= form.text_field :extend %>
+  </div>
+
+  <div>
+    <%= form.label :brand, "Marca", style: "display: block" %>
+    <%= form.text_field :brand %>
+  </div>
+
+  <div>
+    <%= form.label :purchase_price, "Precio Compra", style: "display: block" %>
+    <%= form.text_field :purchase_price %>
+  </div>
+
+  <div>
+    <%= form.label :sale_price, "Precio Venta", style: "display: block" %>
+    <%= form.text_field :sale_price %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,30 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.conteiner {
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+  box-sizing: content-box;
+  text-align: center;
+}
+
+img .img-responsive {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: bottom;
+  display: block;
+}
+
+.conteiner h1 {
+color: rgb(60, 77, 175);
+}
+
+@media only screen and (max-width: 480px){
+  .conteiner img {
+    width: 100%;
+  }
+}

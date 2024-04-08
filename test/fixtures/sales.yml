@@ -1,0 +1,48 @@
+# == Schema Information
+#
+# Table name: sales
+#
+#  id          :bigint           not null, primary key
+#  charget     :decimal(, )
+#  customer    :text
+#  discount    :decimal(, )
+#  id_customer :bigint
+#  id_facture  :integer
+#  id_product  :string
+#  price       :decimal(, )
+#  product     :string
+#  quantity    :integer
+#  returned    :decimal(, )
+#  subtotal    :decimal(, )
+#  total       :decimal(, )
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+one:
+  id_facture: 1
+  id_product: MyString
+  product: MyString
+  quantity: 1
+  price: 9.99
+  subtotal: 9.99
+  total: 9.99
+  discount: 9.99
+  charget: 9.99
+  returned: 9.99
+  id_customer: 
+  customer: MyText
+
+two:
+  id_facture: 1
+  id_product: MyString
+  product: MyString
+  quantity: 1
+  price: 9.99
+  subtotal: 9.99
+  total: 9.99
+  discount: 9.99
+  charget: 9.99
+  returned: 9.99
+  id_customer: 
+  customer: MyText

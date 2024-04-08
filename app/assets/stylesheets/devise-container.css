@@ -1,0 +1,74 @@
+/* CSS */
+body {
+  background-image: url('../images/logodev.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.devise-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(177, 170, 170, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.devise-container h2 {
+  font-family: sans-serif;
+  color: rgb(27, 68, 182);
+}
+
+.field {
+  font-family: sans-serif;
+  color: rgb(27, 68, 182);
+}
+
+.actions {
+  font-family: sans-serif;
+}
+
+footer {
+  position: fixed;
+  /*left: 0;*/
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(177, 170, 170);
+  color: rgb(66, 60, 60);
+  text-align: center;
+  padding: 0px 10px;
+}
+.sticky-footer {
+
+}
+
+@media (min-width: 576px) {
+  /* Para pantallas pequeñas (≥576px) */
+  #devise-container {
+    width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Para tablets (≥768px) */
+  #devise-container {
+    width: 500px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Para pantallas medianas (≥992px) */
+  #devise-container {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Para pantallas grandes (≥1200px) */
+  #devise-container {
+    width: 700px;
+  }
+}

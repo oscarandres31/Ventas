@@ -1,0 +1,43 @@
+<!--<p style="color: green"><%= notice %></p>
+
+<h1>Clientes</h1>
+
+<div id="customers">
+  <% @customers.each do |customer| %>
+    <%= render customer %>
+    <p>
+      <%= link_to "Ver Este Cliente", customer %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Nuevo Cliente", new_customer_path %>-->
+
+<h1>Lista De Clientes</h1>
+<a href="<%= new_customer_path %>" class="btn btn-primary btn-icon-split">
+  <span class="icon text-write-50">
+  <i class="fas fa-flag"></i>
+  </span>
+  <span class="text">Crear Cliente</span>
+</a>
+<%#<%= link_to 'Exportar a Excel', product_url(@product, format: :xlsx), class: 'btn btn-success' %>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Identificación</th>
+      <th>Nombres</th>
+      <th>Telefono</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @customers.each do |product| %>
+    <tr>
+      <td><%= product.identification %></td>
+      <td><%= product.name %></td>
+      <td><%= product.phone %></td>
+      <td><%= link_to "Detalles", customer_path(product), class:'btn btn-primary' %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

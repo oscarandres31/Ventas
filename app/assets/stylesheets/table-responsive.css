@@ -1,0 +1,30 @@
+@import "../stylesheets/all.min.css";
+
+th {
+  background-color: rgb(211, 169, 245);
+  color: rgb(3, 3, 3);
+  font-weight: normal;
+  text-align: right;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+td, th {
+  padding: .8em;
+ /* border-bottom: 0.2px solid rgb(95, 95, 93);*/
+}
+
+.table {
+  overflow-x: auto;
+}
+
+@media only screen and (max-width: 600px){
+  .table th, td {
+    font-size: 5px;
+    padding: 1px;
+  }
+  .btn {
+    font-size: 5px;
+    padding: 1px;
+    padding-left: 0px;
+  }
+}

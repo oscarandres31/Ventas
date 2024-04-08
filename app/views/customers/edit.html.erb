@@ -1,0 +1,10 @@
+<h1>Editar Cliente</h1>
+
+<%= render "form", customer: @customer %>
+
+<br>
+
+<div>
+  <%= link_to "Ver este Cliente", @customer, class:'btn btn-success' %> |
+  <%= link_to "Regresar a Clientes", customers_path, class:'btn btn-primary'%>
+</div>
